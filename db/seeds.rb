@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+publications = Publication.create([{ name: 'NY Times', lean: 2}, {name: 'The Herald', lean: 7}, { name: 'The Town Crier', lean: 5}])
+
+
