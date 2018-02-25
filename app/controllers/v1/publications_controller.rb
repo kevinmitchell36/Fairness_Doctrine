@@ -18,4 +18,18 @@ class V1::PublicationsController < ApplicationController
     publication = Publication.find_by(id: params[:id])
     render json: publication.as_json
   end
+
+  def update
+    publication = Publication.find_by(id: params[:id])
+    publication.name = params[:name] || publication.name
+    publication.lean = params[:lean] || publication.lean
+    publication.save
+    render json: publication.as_json
+  end
+
+  def destroy
+    publication = Publication.find_by(id: params[:id])
+    publication.destroy
+    render json: {message: "Publication deleted"}
+  end
 end

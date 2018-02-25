@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     get '/' => 'publications#index'
     post '/publications' => 'publications#create'
     get '/publications/:id' => 'publications#show'
+    patch '/publications/:id' => 'publications#update'
+    delete '/publications/:id' => 'publications#destroy'
   end
 end
 
