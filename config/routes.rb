@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     get '/publications/:id' => 'publications#show'
     patch '/publications/:id' => 'publications#update'
     delete '/publications/:id' => 'publications#destroy'
+
+    post '/users' => 'users#create'
+    post '/user_token' => 'user_token#create'
   end
 end
 

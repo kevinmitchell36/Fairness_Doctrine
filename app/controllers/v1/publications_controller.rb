@@ -1,5 +1,5 @@
 class V1::PublicationsController < ApplicationController
-
+  before_action :authenticate_user
   def index
     publications = Publication.all
     render json: publications.as_json
